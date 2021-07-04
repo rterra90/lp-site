@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  background-image: url("/img/Slanted-Gradient.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #d4d4d4;
+  overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+ul {
+  font-family: "Big Shoulders Display", sans-serif;
+  list-style: none;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+/*animações*/
+[data-anima] {
+  transition: 1s ease-in-out;
+}
+[data-anima="left"] {
+  transform: translateX(-15px);
+  opacity: 0;
+}
+[data-anima="right"] {
+  transform: translateX(15px);
+  opacity: 0;
+}
+[data-anima="img-intro"] {
+  transform: translateY(-40px);
+  opacity: 0;
+}
+[data-anima="btn-intro"] {
+  transform: scale(0.93);
+  opacity: 0;
+}
+.anima-center {
+  transform: translateX(0px);
+  transform: scale(1);
+  opacity: 1;
+}
+
+/*animação muda seção*/
+main > section {
+  position: relative;
+}
+.d-none {
+  display: none !important;
+}
+.animate-up-out {
+  animation: up-out 0.7s ease forwards;
+}
+.animate-up-in {
+  animation: up-in 0.4s ease forwards;
+}
+.animate-down-out {
+  animation: down-out 0.7s ease forwards;
+}
+.animate-down-in {
+  animation: down-in 0.4s ease forwards;
+}
+@keyframes up-out {
+  0% {
+    top: 0px;
+  }
+  12% {
+    transform: scale(0.88);
+  }
+  17% {
+    transform: scale(0.92);
+  }
+  75% {
+    opacity: 1;
+    top: 0px;
+  }
+  80% {
+    top: 10px;
+  }
+  100% {
+    transform: scale(0.92);
+    top: -550px;
+    opacity: 0;
+  }
+}
+
+@keyframes up-in {
+  0% {
+    top: 200px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes down-out {
+  0% {
+    top: 0px;
+  }
+  12% {
+    transform: scale(0.88);
+  }
+  17% {
+    transform: scale(0.92);
+  }
+  75% {
+    opacity: 1;
+    top: 0px;
+  }
+  80% {
+    top: 10px;
+  }
+  100% {
+    transform: scale(0.92);
+    top: 550px;
+    opacity: 0;
+  }
+}
+
+@keyframes down-in {
+  0% {
+    top: -200px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+/*MENU LATERAL*/
+aside {
+  background-color: #0a0a0a;
+  width: 26%;
+  height: 100vh;
+  float: right;
+}
+
+aside ul {
+  margin-left: 40px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  gap: 75px;
+  font-size: 24px;
+}
+aside ul li {
+  cursor: pointer;
+}
+.menu-active {
+  font-size: 50px;
+  font-weight: 600;
+}
+header {
+  height: 80px;
+  width: 10px;
+  display: block;
+  background-color: red;
+  position: absolute;
+}
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.intro {
+  display: grid;
+  grid-template-areas: "title img" "title box" "txt box" "txt btn";
+}
+
+.intro h2 {
+  grid-area: title;
+  font-size: 4em;
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+.intro-img {
+  grid-area: img;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.intro-img img:nth-child(1) {
+  width: 14%;
+}
+.intro-img img:nth-child(2) {
+  width: 40%;
+}
+.intro-img img:nth-child(3) {
+  width: 10%;
+}
+.intro-img img {
+  transition: 0.75s ease-out;
+}
+
+.intro .text {
+  grid-area: txt;
+  font-size: 18px;
+  margin-top: 40px;
+}
+.intro .text p {
+  width: 400px;
+  line-height: 1.5;
+  margin-top: 14px;
+}
+
+.intro .box {
+  grid-area: box;
+}
+.box > div {
+  background: rgba(255, 255, 255, 0.123);
+  width: 45%;
+  margin: 40px auto;
+  padding: 10px;
+  border: 3px black solid;
+  border-radius: 8px;
+}
+.box > div span {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.675em;
+}
+.box ul {
+  margin-top: 15px;
+}
+.box li {
+  font-family: "Montserrat";
+  font-size: 0.65em;
+  margin: 15px 0px 15px 50px;
+  position: relative;
+  /* background: red; */
+}
+.box li::before {
+  content: url("/img/icon-check.svg");
+  transform: scale(0.75);
+  position: absolute;
+  left: -20px;
+  bottom: -5px;
+}
+
+.btns {
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.btns span {
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+.btns span a {
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform 0.5s;
+  font-family: "Montserrat", sans-serif;
+}
+span a:before,
+span a:after {
+  position: absolute;
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #0a0a0a;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+span a:before {
+  color: #fff;
+  background: #0a0a0a;
+  transform: rotateY(0deg) translateZ(25px);
+}
+span a:after {
+  color: #000;
+  background: rgba(255, 255, 255, 0.123);
+  transform: rotateX(90deg) translateZ(25px);
+}
+span a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+.btns span:nth-child(1) a::before,
+.btns span:nth-child(1) a::after {
+  content: "saiba mais";
+}
+.btns span:nth-child(2) a::before,
+.btns span:nth-child(2) a::after {
+  content: "contato";
+}
+
+/*COMO FUNCIONA*/
+.como-funciona h2 {
+  margin: 0 0 10px 92px;
+  font-size: 40px;
+}
+.como-funciona > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.como-funciona > div > div {
+  width: 390px;
+  height: 240px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.123);
+  padding: 20px;
+  border: 3px black solid;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.como-funciona > div > div p {
+  width: 60%;
+  line-height: 2;
+  font-weight: 600;
+  font-size: 16px;
+}
+.como-funciona > div > div:nth-child(1) {
+  background-image: url("/img/email-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 230px;
+}
+.como-funciona > div > div:nth-child(2) {
+  background-image: url("/img/box-2-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 250px;
+}
+.como-funciona > div > div:nth-child(3) {
+  background-image: url("/img/box-3-bg.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 290px;
+}
+.como-funciona > div > div:nth-child(4) {
+  background-image: url("/img/box-4-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 240px;
+}
