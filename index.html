@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
+  <title>Document</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,15 +18,17 @@
   <aside>
     <nav>
       <ul>
-        <li class="menu-active" data-anima="btn-intro" data-time="1500">introdução</li>
-        <li data-anima="btn-intro" data-time="1800">como funciona</li>
-        <li data-anima="btn-intro" data-time="2100">porque um site</li>
-        <li data-anima="btn-intro" data-time="2400">vamos lá</li>
+        <li class="menu-active" data-anima="btn-intro" data-time="1500" data-order=0>introdução</li>
+        <li data-anima="btn-intro" data-time="1800" data-order=1>como funciona</li>
+        <li data-anima="btn-intro" data-time="2100" data-order=2>porque um site</li>
+        <li data-anima="btn-intro" data-time="2400" data-order=3>vamos lá</li>
       </ul>
     </nav>
 
   </aside>
+
   <div class="container">
+
 
     <main class="main">
       <!-- <header></header> -->
@@ -60,8 +62,8 @@
           </div>
         </div>
         <div class="btns">
-          <span data-anima="btn-intro" data-time="3000"><a href="#"></a></span>
-          <span data-anima="btn-intro" data-time="3000"><a href="#"></a></span>
+          <span data-anima="btn-intro" data-time="3000" data-order=0><a href="#"></a></span>
+          <span data-anima="btn-intro" data-time="3000" data-order=1><a href="#"></a></span>
           <!-- <button>saiba mais</button>
           <button>entre em contato</button> -->
         </div>
@@ -95,6 +97,12 @@
       <section class="contato d-none" data-section=3>
         <h2>vamos lá</h2>
       </section>
+      <nav class="nav-btn">
+        <div class="active-nav" data-order=0></div>
+        <div data-order=1></div>
+        <div data-order=2></div>
+        <div data-order=3></div>
+      </nav>
     </main>
   </div>
 
