@@ -8,7 +8,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  background-image: url("/img/Slanted-Gradient.svg");
+  background-image: url("../img/Slanted-Gradient.svg");
   background-size: cover;
   background-repeat: no-repeat;
   color: #d4d4d4;
@@ -292,7 +292,7 @@ main {
   /* background: red; */
 }
 .box li::before {
-  content: url("/img/icon-check.svg");
+  content: url("../img/icon-check.svg");
   transform: scale(0.75);
   position: absolute;
   left: -20px;
@@ -387,25 +387,25 @@ span a:hover {
   font-size: 16px;
 }
 .como-funciona > div > div:nth-child(1) {
-  background-image: url("/img/email-bg.svg");
+  background-image: url("../img/email-bg.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-position-x: 230px;
 }
 .como-funciona > div > div:nth-child(2) {
-  background-image: url("/img/box-2-bg.svg");
+  background-image: url("../img/box-2-bg.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-position-x: 250px;
 }
 .como-funciona > div > div:nth-child(3) {
-  background-image: url("/img/box-3-bg.png");
+  background-image: url("../img/box-3-bg.png");
   background-repeat: no-repeat;
   background-position: right;
   background-position-x: 290px;
 }
 .como-funciona > div > div:nth-child(4) {
-  background-image: url("/img/box-4-bg.svg");
+  background-image: url("../img/box-4-bg.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-position-x: 240px;
