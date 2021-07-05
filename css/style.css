@@ -8,7 +8,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  background-image: url("../img/Slanted-Gradient.svg");
+  background-image: url("/img/Slanted-Gradient.svg");
   background-size: cover;
   background-repeat: no-repeat;
   color: #d4d4d4;
@@ -58,6 +58,7 @@ p {
 /*animação muda seção*/
 main > section {
   position: relative;
+  border-radius: 8px;
 }
 .d-none {
   display: none !important;
@@ -80,6 +81,7 @@ main > section {
   }
   12% {
     transform: scale(0.88);
+    /* box-shadow: 0px 0px 200px #d4d4d415 inset, 0px 0px 20px #d4d4d415; */
   }
   17% {
     transform: scale(0.92);
@@ -95,6 +97,7 @@ main > section {
     transform: scale(0.92);
     top: -550px;
     opacity: 0;
+    /* box-shadow: 0px 0px 200px #d4d4d415 inset, 0px 0px 20px #d4d4d415; */
   }
 }
 
@@ -114,6 +117,7 @@ main > section {
     top: 0px;
   }
   12% {
+    /* box-shadow: 0px 0px 200px #d4d4d415 inset, 0px 0px 20px #d4d4d415; */
     transform: scale(0.88);
   }
   17% {
@@ -130,6 +134,7 @@ main > section {
     transform: scale(0.92);
     top: 550px;
     opacity: 0;
+    /* box-shadow: 0px 0px 200px #d4d4d415 inset, 0px 0px 20px #d4d4d415; */
   }
 }
 
@@ -145,6 +150,36 @@ main > section {
 }
 
 /*MENU LATERAL*/
+/*esquerdo*/
+.nav-btn {
+  width: 8px;
+  height: 300px;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0.25;
+  padding: 2px 8px;
+  transition: 0.25s;
+}
+.nav-btn:hover {
+  opacity: 1;
+}
+.nav-btn > div {
+  border-radius: 4px;
+  height: 25%;
+  border: 1px solid #d4d4d43d;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.nav-btn > div:hover {
+  background-color: #d4d4d423;
+}
+.active-nav {
+  background-color: #d4d4d4 !important;
+}
+/*direito*/
 aside {
   background-color: #0a0a0a;
   width: 26%;
@@ -164,6 +199,7 @@ aside ul {
 }
 aside ul li {
   cursor: pointer;
+  transition: 0.6s !important;
 }
 .menu-active {
   font-size: 50px;
@@ -187,6 +223,7 @@ main {
 .intro {
   display: grid;
   grid-template-areas: "title img" "title box" "txt box" "txt btn";
+  padding-left: 30px;
 }
 
 .intro h2 {
@@ -255,7 +292,7 @@ main {
   /* background: red; */
 }
 .box li::before {
-  content: url("../img/icon-check.svg");
+  content: url("/img/icon-check.svg");
   transform: scale(0.75);
   position: absolute;
   left: -20px;
@@ -284,6 +321,7 @@ main {
   transition: transform 0.5s;
   font-family: "Montserrat", sans-serif;
 }
+
 span a:before,
 span a:after {
   position: absolute;
@@ -320,7 +358,8 @@ span a:hover {
 
 /*COMO FUNCIONA*/
 .como-funciona h2 {
-  margin: 0 0 10px 92px;
+  margin: 0 auto 10px;
+  text-align: center;
   font-size: 40px;
 }
 .como-funciona > div {
@@ -348,25 +387,25 @@ span a:hover {
   font-size: 16px;
 }
 .como-funciona > div > div:nth-child(1) {
-  background-image: url("../img/email-bg.svg");
+  background-image: url("/img/email-bg.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-position-x: 230px;
 }
 .como-funciona > div > div:nth-child(2) {
-  background-image: url("../img/box-2-bg.svg");
+  background-image: url("/img/box-2-bg.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-position-x: 250px;
 }
 .como-funciona > div > div:nth-child(3) {
-  background-image: url("../img/box-3-bg.png");
+  background-image: url("/img/box-3-bg.png");
   background-repeat: no-repeat;
   background-position: right;
   background-position-x: 290px;
 }
 .como-funciona > div > div:nth-child(4) {
-  background-image: url("../img/box-4-bg.svg");
+  background-image: url("/img/box-4-bg.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-position-x: 240px;
